@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndi-tull <ndi-tull@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: theomart <theomart@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 13:27:37 by ndi-tull          #+#    #+#             */
-/*   Updated: 2025/12/10 11:52:39 by ndi-tull         ###   ########.fr       */
+/*   Updated: 2025/12/10 14:34:05 by theomart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,19 @@ typedef struct s_stack
 	int capacity; // Taille max que le tableau peut avoir
 }		t_stack;
 
-void	rra(t_stack *a, int c);
-void	rrb(t_stack *b, int c);
-void	rrr(t_stack *a, t_stack *b);
-void	pb(t_stack *a, t_stack *b);
-void	pa(t_stack *a, t_stack *b);
-void	ss(t_stack *a, t_stack *b);
-void	sb(t_stack *b, int c);
-void	sa(t_stack *a, int c);
-void	rr(t_stack *a, t_stack *b);
-void	rrb(t_stack *b, int c);
-void	rra(t_stack *a, int c);
-void	ra(t_stack *a, int c);
-void	rb(t_stack *b, int c);
-float	desorder(t_stack *a);
+void	rra(t_stack *a, int c, int *compteur);
+void	rrb(t_stack *b, int c, int *compteur);
+void	rrr(t_stack *a, t_stack *b, int *compteur);
+void	pb(t_stack *a, t_stack *b, int *compteur);
+void	pa(t_stack *a, t_stack *b, int *compteur);
+void	ss(t_stack *a, t_stack *b, int *compteur);
+void	sb(t_stack *b, int c, int *compteur);
+void	sa(t_stack *a, int c, int *compteur);
+void	rr(t_stack *a, t_stack *b, int *compteur);
+void	rrb(t_stack *b, int c, int *compteur);
+void	rra(t_stack *a, int c, int *compteur);
+void	ra(t_stack *a, int c, int *compteur);
+void	rb(t_stack *b, int c, int *compteur);
+float	desorder(t_stack *a, int *compteur);
 
 #endif
