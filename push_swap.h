@@ -6,7 +6,7 @@
 /*   By: ndi-tull <ndi-tull@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 13:27:37 by ndi-tull          #+#    #+#             */
-/*   Updated: 2025/12/09 18:08:18 by ndi-tull         ###   ########.fr       */
+/*   Updated: 2025/12/10 11:52:39 by ndi-tull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void	sa(t_stack *a, int c);
 void	rr(t_stack *a, t_stack *b);
 void	rrb(t_stack *b, int c);
 void	rra(t_stack *a, int c);
+void	ra(t_stack *a, int c);
+void	rb(t_stack *b, int c);
 float	desorder(t_stack *a);
 
 #endif

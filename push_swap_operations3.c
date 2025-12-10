@@ -6,7 +6,7 @@
 /*   By: ndi-tull <ndi-tull@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:37:17 by ndi-tull          #+#    #+#             */
-/*   Updated: 2025/12/09 15:43:47 by ndi-tull         ###   ########.fr       */
+/*   Updated: 2025/12/10 12:05:32 by ndi-tull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	rra(t_stack *a, int c)
 	}
 	a->data[0] = tmp;
 	if (c == 1)
-		write(1, "rra\n", 3);
+		write(1, "rra\n", 4);
 }
 
 void	rrb(t_stack *b, int c)
@@ -47,12 +47,12 @@ void	rrb(t_stack *b, int c)
 	}
 	b->data[0] = tmp;
 	if (c == 1)
-		write(1, "rrb\n", 3);
+		write(1, "rrb\n", 4);
 }
 
 void	rrr(t_stack *a, t_stack *b)
 {
 	rra(a, 0);
 	rrb(b, 0);
-	write(1, "rrr\n", 3);
+	write(1, "rrr\n", 4);
 }

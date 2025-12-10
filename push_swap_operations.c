@@ -6,7 +6,7 @@
 /*   By: ndi-tull <ndi-tull@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 13:13:50 by ndi-tull          #+#    #+#             */
-/*   Updated: 2025/12/09 15:43:06 by ndi-tull         ###   ########.fr       */
+/*   Updated: 2025/12/10 12:18:32 by ndi-tull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,24 +49,18 @@ void	pa(t_stack *a, t_stack *b)
 {
 	int	i;
 
-	if (a->size == 0)
+	if (b->size == 0)
 		return ;
-	i = a->size;
-	while (i > 0)
-	{
+	// décaler a vers le haut pour faire de la place
+	for (i = a->size; i > 0; i--)
 		a->data[i] = a->data[i - 1];
-		i--;
-	}
+	// on met b->data[0] dans a->data[0]
 	a->data[0] = b->data[0];
 	a->size++;
-	i = 0;
-	while (b->size - 1)
-	{
+	// décaler b vers le bas
+	for (i = 0; i < b->size - 1; i++)
 		b->data[i] = b->data[i + 1];
-		i++;
-	}
 	b->size--;
-	write(1, "pa\n", 3);
 }
 
 void	pb(t_stack *a, t_stack *b)
@@ -84,7 +78,7 @@ void	pb(t_stack *a, t_stack *b)
 	b->data[0] = a->data[0];
 	b->size++;
 	i = 0;
-	while (a->size - 1)
+	while (i < a->size - 1)
 	{
 		a->data[i] = a->data[i + 1];
 		i++;
