@@ -131,7 +131,7 @@ int	main(int ac, char **av)
 		a.data[i - 1] = atoi(av[i]);
 		i++;
 	}
-	write(1, "--- AVANT TRI ---\n", 18);
+	write(1, "--- AVANT AVANT TRI ---\n", 18);
 	print_stack("A", &a);
 	print_stack("B", &b);
 	sort_stacks(&a, &b, &count);
