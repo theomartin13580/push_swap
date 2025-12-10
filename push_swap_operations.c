@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_operations.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: theomart <theomart@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: ndi-tull <ndi-tull@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 13:13:50 by ndi-tull          #+#    #+#             */
-/*   Updated: 2025/12/10 14:25:52 by theomart         ###   ########.fr       */
+/*   Updated: 2025/12/10 16:26:28 by ndi-tull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_stack *a, int c, int *compteur)
+void	sa(t_stack *a, int c, int *count)
 {
 	int	tmp;
 
@@ -24,11 +24,11 @@ void	sa(t_stack *a, int c, int *compteur)
 	if (c == 1)
 	{
 		write(1, "sa\n", 3);
-		(*compteur) ++;
+		(*count)++;
 	}
 }
 
-void	sb(t_stack *b, int c, int *compteur)
+void	sb(t_stack *b, int c, int *count)
 {
 	int	tmp;
 
@@ -40,20 +40,19 @@ void	sb(t_stack *b, int c, int *compteur)
 	if (c == 1)
 	{
 		write(1, "sb\n", 3);
-		(*compteur) ++;
+		(*count)++;
 	}
 }
 
-void	ss(t_stack *a, t_stack *b, int *compteur)
+void	ss(t_stack *a, t_stack *b, int *count)
 {
-	sa(a, 0, compteur);
-	sb(b, 0, compteur);
+	sa(a, 0, count);
+	sb(b, 0, count);
 	write(1, "ss\n", 3);
-	(*compteur) ++;
-
+	(*count)++;
 }
 
-void	pa(t_stack *a, t_stack *b, int *compteur)
+void	pa(t_stack *a, t_stack *b, int *count)
 {
 	int	i;
 
@@ -70,11 +69,10 @@ void	pa(t_stack *a, t_stack *b, int *compteur)
 		b->data[i] = b->data[i + 1];
 	b->size--;
 	write(1, "pa\n", 3);
-	(*compteur) ++;
-
+	(*count)++;
 }
 
-void	pb(t_stack *a, t_stack *b, int *compteur)
+void	pb(t_stack *a, t_stack *b, int *count)
 {
 	int	i;
 
@@ -96,5 +94,5 @@ void	pb(t_stack *a, t_stack *b, int *compteur)
 	}
 	a->size--;
 	write(1, "pb\n", 3);
-	(*compteur) ++;
+	(*count)++;
 }

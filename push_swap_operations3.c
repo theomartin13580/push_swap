@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_operations3.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: theomart <theomart@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: ndi-tull <ndi-tull@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:37:17 by ndi-tull          #+#    #+#             */
-/*   Updated: 2025/12/10 14:38:25 by theomart         ###   ########.fr       */
+/*   Updated: 2025/12/10 16:26:10 by ndi-tull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rra(t_stack *a, int c, int *compteur)
+void	rra(t_stack *a, int c, int *count)
 {
 	int	i;
 	int	tmp;
@@ -30,11 +30,11 @@ void	rra(t_stack *a, int c, int *compteur)
 	if (c == 1)
 	{
 		write(1, "rra\n", 4);
-		(*compteur) ++;
+		(*count)++;
 	}
 }
 
-void	rrb(t_stack *b, int c, int *compteur)
+void	rrb(t_stack *b, int c, int *count)
 {
 	int	i;
 	int	tmp;
@@ -52,15 +52,14 @@ void	rrb(t_stack *b, int c, int *compteur)
 	if (c == 1)
 	{
 		write(1, "rrb\n", 4);
-		(*compteur) ++;
+		(*count)++;
 	}
 }
 
-void	rrr(t_stack *a, t_stack *b, int *compteur)
+void	rrr(t_stack *a, t_stack *b, int *count)
 {
-	rra(a, 0, compteur);
-	rrb(b, 0, compteur);
+	rra(a, 0, count);
+	rrb(b, 0, count);
 	write(1, "rrr\n", 4);
-	(*compteur) ++;
-
+	(*count)++;
 }
